@@ -1,0 +1,22 @@
+Get http://localhost:5003
+
+###
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "username": "PyaeSone123123@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "username": "PyaeSone123123@gmail.com",
+    "password": "123456"
+}
+
+
+GET http://localhost:5003/todo/
