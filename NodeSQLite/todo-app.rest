@@ -18,5 +18,15 @@ Content-Type: application/json
     "password": "123456"
 }
 
+###
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2ODc2ODgyLCJleHAiOjE3MzY5NjMyODJ9.aCHvycmh-t-Ff0OlME3z9gkrnLQKWiwtbJPcSp-1zvY
 
-GET http://localhost:5003/todo/
+###
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2ODc2ODgyLCJleHAiOjE3MzY5NjMyODJ9.aCHvycmh-t-Ff0OlME3z9gkrnLQKWiwtbJPcSp-1zvY
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
