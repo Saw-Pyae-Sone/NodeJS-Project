@@ -20,13 +20,26 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2ODc2ODgyLCJleHAiOjE3MzY5NjMyODJ9.aCHvycmh-t-Ff0OlME3z9gkrnLQKWiwtbJPcSp-1zvY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2OTQyNjI0LCJleHAiOjE3MzcwMjkwMjR9.OqiZdUdbS45tfFmE0O38KJV2iyQ8WqMBHFTQXxefexg
 
 ###
 POST http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2ODc2ODgyLCJleHAiOjE3MzY5NjMyODJ9.aCHvycmh-t-Ff0OlME3z9gkrnLQKWiwtbJPcSp-1zvY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2OTQyNjI0LCJleHAiOjE3MzcwMjkwMjR9.OqiZdUdbS45tfFmE0O38KJV2iyQ8WqMBHFTQXxefexg
 Content-Type: application/json
 
 {
     "task": "Finish coding the projects"
 }
+
+### Update a todo PUT /todos/:id (protected)
+PUT http://localhost:5003/todos/1?task="thisistheupdated"
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2OTQyNjI0LCJleHAiOjE3MzcwMjkwMjR9.OqiZdUdbS45tfFmE0O38KJV2iyQ8WqMBHFTQXxefexg
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo PUT /todos/:id (protected)
+DELETE http://localhost:5003/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2OTQyNjI0LCJleHAiOjE3MzcwMjkwMjR9.OqiZdUdbS45tfFmE0O38KJV2iyQ8WqMBHFTQXxefexg
