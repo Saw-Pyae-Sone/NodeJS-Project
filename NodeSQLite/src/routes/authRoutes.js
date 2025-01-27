@@ -37,7 +37,6 @@ router.post('/register', (req, res) => {
 
         console.log(process.env.JWT_SECRET);
         return res.json({ token }); 
-
     } catch (err) {
         console.log(err.message);
         return res.status(503).json({ message: "Service unavailable, please try again later" });
