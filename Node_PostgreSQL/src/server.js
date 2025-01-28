@@ -6,6 +6,7 @@ import todoRoutes from "./routes/todoRoutes.js";
 import dotenv from 'dotenv';
 import authMiddleware from './middleware/authMiddleware.js';
 
+// trying to understand everything
 const app = express();
 const PORT = process.env.PORT || 5003;
 dotenv.config();
@@ -24,8 +25,6 @@ app.get('/', (req, res) => {
 app.use('/auth', authRoutes)
 
 app.use('/todos', authMiddleware, todoRoutes)
-
-
 
 app.listen(PORT, () => {
     console.log(`Server has started on ${PORT}`)
