@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken"
 import dotenv from 'dotenv';
 import prisma from "../prismaclient.js";
 
+// using postgresql
+
 dotenv.config();
 
 const router = express.Router();
